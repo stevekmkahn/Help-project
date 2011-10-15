@@ -1,0 +1,25 @@
+<h1>Listing helpdbs</h1>
+
+<table>
+  <tr>
+    <th>Name</th>
+    <th>Address</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @helpdbs.each do |helpdb| %>
+  <tr>
+    <td><%= helpdb.name %></td>
+    <td><%= helpdb.address %></td>
+    <td><%= link_to 'Show', helpdb %></td>
+    <td><%= link_to 'Edit', edit_helpdb_path(helpdb) %></td>
+    <td><%= link_to 'Destroy', helpdb, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Helpdb', new_helpdb_path %>

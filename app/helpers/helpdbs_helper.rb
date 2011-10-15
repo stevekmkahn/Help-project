@@ -1,0 +1,2 @@
+module HelpdbsHelper
+end
